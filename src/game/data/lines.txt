@@ -1,0 +1,110 @@
+/ menu item names
+dif_easy Easy
+dif_normal Normal
+dif_hard Hard
+length_short Small
+length_medium Medium
+length_long Large
+/ dialogue lines
+/ intro/outro
+dia_intro1J You did some wrong things in your life, and you were sentenced to execution for your crimes. Or execution of a sort, anyway. You are one of a series of criminals sent in to the Pix warrens, to eliminate their chief.*n*If you succeed, you will be pardoned. If you fail, you'll be dead.
+dia_intro1E You haven't lived a perfect life, but you had expected to be sent to prison, not slated for execution. They have sent you down to the Pix warrens, with the promise that if you kill their chief you will be pardoned.*n*The government must be desperate, to send people down here with a deal like that.
+dia_intro1U You were arrested unjustly, and sent down to the Pix warrens. They told you that if you kill the Pix chief you will be allowed to return.*n*You don't really have a choice but to play along, really. You doubt the Pix will care much for a sob story.
+dia_intro2 You regain consciousness, and quickly begin looking around. They seem to have left a club for you, and a bomb as a last resort. Hopefully you can find a better weapon soon.
+dia_outro1 You fall to your knees, exhausted. The remaining Pix flee, too scared to challenge you.*n*You have won. You'll be able to return now.
+dia_outro2 Hopefully the government will respect their promise.
+/ rink
+dia_rinkIntro1 Before you stands a calm-looking Pix.*n*It grips a wooden staff, supporting the weight of a stuffed backpack.
+dia_rinkIntro2 "Greetings. Do not worry, I am not here to fight.*n*I am Rink, a merchant."
+dia_rinkIntro3 "If you bring me coin, I can sell you ammunition. Useful, no? Or I could sell you weapons and armor.*n*...where did I get human weapons and armor? Do not worry about it."
+dia_rinkPurchase1 "Thank you for your patronage.*n*I can be found in many places. Do come again."
+dia_rinkAbstain1 Rink regards you impassively.
+dia_rinkAbstain2 "Maybe another time then."
+dia_rinkTalk1-1 "Ah. Back again?*n*I am still well-stocked. Take a look."
+dia_rinkTalk2-1 "My prices are excellent, as always."
+dia_rinkTalk3-1 "Why did a Pix become a merchant?*n*Did you not think we had merchants? Just because we are at war with your nation does not mean we are at war with all humans.*n*Do not worry, though, I do not let insults get in the way of business."
+dia_rinkTalk4-1 "Do not worry about what will happen to me if you scatter this warren.*n*I can just travel to another. Perhaps to the north.*n*I will sell to you, until then."
+dia_rinkTalk5-1 "I would ask you do not mention me to the other Pix here, but they would not listen anyway.*n*Still, be quiet when you buy from me."
+dia_rinkTalk6-1 Rink merely stares at you, silently waiting for an offer.
+dia_rinkTalk7-1 "I am not interested in buying goods, only selling.*n*Are you here to buy from me?"
+dia_rinkTalk8-1 "You truly want to know where I get my goods?*n*I have suppliers, and I scavenge what is left behind after battles. Among other sources.*n*Do you wish to sample my goods?"
+dia_rinkTalk9-1 "My pronunciation is correct, no? It is important for a trader to be understood when talking.*n*Well, if you can understand me then that is most likely enough."
+dia_rinkTalk10-1 "I have excessive amounts of ammo to sell, do not worry."
+/ javelin
+dia_javelinIntro1 Before you stands a smooth-looking human [man/woman]. [He/She] regards you with inquisitive eyes.
+dia_javelinIntro2 "Ah! Salutations. I am Javelin.*n*...you haven't heard of me? Nevermind."
+dia_javelinIntro3 [He/She] smiles at you.
+dia_javelinIntro4 "I was sent down here, just like you.*n*From the looks of you, though, I've done a much better job at avoiding the Pix."
+dia_javelinIntro5 "I've been sneaking around this warren for quite a while, snatching what I can.*n*Pixmetal is quite valuable back home, so I've been hoarding it in secret caches."
+dia_javelinIntro6 "One day someone'll kill their chief and I'll return back in the chaos with a fortune in metal.*n*I'm content to wait for that day."
+dia_javelinIntro7 [He/She] looks thoughtful for a moment.
+dia_javelinIntro8 "...you know, if you bring me some pixmetal, I can make it worth your while. Teach you some of my secrets.*n*I don't see any stealth in you, but I can show you how to dance like a flame and run like the wind.*n*Fancy, right? How about it?"
+dia_javelinPurchase1 [He/She] gives you a faint smile, looking exhausted.
+dia_javelinPurchase2 "Perfect, sugar, I think you get it.*n*I should leave now. If you find me again, I can show you more.*n*It was fun!"
+dia_javelinAbstain1 "Well, be sure to think about it."
+dia_javelinTalk1-1 "Hey, sugar. You here for some training?"
+dia_javelinTalk2-1 "Looking fine there.*n*If you want, I can show you some moves."
+dia_javelinTalk3-1 "How am I doing?*n*I'm fine. A Pix Elite almost caught me a while ago, but I knocked it out."
+dia_javelinTalk3-2 [He/She] grimaces.
+dia_javelinTalk3-3 "I'm a little embarassed how sloppy I was there. Well, if you still believe in me I'll show you how to run."
+dia_javelinTalk4-1 "I'm pretty tired, but I can still show you my moves if you show me some pixmetal."
+dia_javelinTalk5-1 "You did great back there, don't worry.*n*...oh, you didn't notice I was watching you? It's a good idea to keep an eye on what's going on, down here."
+/ anvil
+dia_anvilIntro1 Before you stands an anvil of pure pixmetal.
+dia_anvilIntro2 This is probably one of the anvils the Pix use to work with pixmetal. From what you have heard, pixmetal does not need to be heated to use; it just requires one of these anvils.*n*You could probably make something out of pixmetal, here.
+dia_anvilPurchase1 You finish your work, arms sore.
+dia_anvilAbstain1 You decide not to make anything.
+dia_anvilTalk1-1 You approach the pixmetal anvil again.
+/ basin
+dia_basinIntro1 Before you stands a basin of glowing water.
+dia_basinIntro2 You have no idea what this is. A quick examination reveals a few rusted coins in the water.*n*You get the feeling that if you drop some coins into this, something good might happen.
+dia_basinPurchase1 Your eyes momentarily recover from the flash of light.*n*You feel healthier than ever.
+dia_basinPurchase2 The basin rumbles, spent of whatever special energy it had before.
+dia_basinAbstain1 You decide to save your money.
+dia_basinTalk1-1 You approach a magic basin once again.
+/ item names
+it_bomb Bomb
+it_bolt Crossbow Bolts x5
+it_stone Stones x33
+it_coin Coin
+it_ingot Pixmetal Ingot
+it_threeCoin Coins x3
+it_threeIngot Pixmetal Ingots x3
+it_goblet Goblet of Health
+it_sword Sword
+it_pixmetalSword Pixmetal Sword
+it_axe Axe
+it_pixmetalAxe Pixmetal Axe
+it_club Club
+it_crossbow Crossbow
+it_pixmetalCrossbow Pixmetal Crossbow
+it_autosling Automatic Sling
+it_pixmetalAutosling Pixmetal Automatic Sling
+it_armorPlate Light Armor
+it_pixmetalArmorPlate Pixmetal Light Armor
+it_chestPlate Heavy Armor
+it_pixmetalChestPlate Pixmetal Heavy Armor
+it_armorSkirt Armor Skirt
+it_pixmetalArmorSkirt Pixmetal Armor Skirt
+it_greaves Greaves
+it_pixmetalGreaves Pixmetal Greaves
+it_boots Boots
+it_pixmetalBoots Pixmetal Boots
+it_metalBoots Armored Boots
+it_pixmetalMetalBoots Pixmetal Armored Boots
+ar_mask Mask
+ar_glasses Glasses
+ar_eyepatch Eyepatch
+/ crimes
+crim_theft Theft
+crim_murder Murder
+crim_arson Arson
+crim_trespasser Trespassing
+crim_framed Framed for Murder
+crim_homosexual Deviant Sexual Behavior
+crim_heretic Deviant Religious Beliefs
+crim_political Dissidence
+crim_treason Treason
+crim_rebel Rebellion
+/
+/

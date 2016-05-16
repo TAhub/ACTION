@@ -1,0 +1,571 @@
+SHEET:
+/ name width height
+sh_body 25 30
+sh_arm 20 5
+sh_weapon 25 50
+sh_leg 25 20
+sh_face 19 19
+sh_projectile 25 20
+sh_item 20 20
+sh_special 80 50
+sh_tile 50 50
+sh_giantBody 50 50
+sh_giantLeg 50 25
+sh_giantArm 40 10
+sh_giantFace 27 27
+sh_giantWeapon 50 100
+sh_giantProjectile 50 40
+/
+/
+TILE:
+/ name sheet frame color aboveSheet aboveFrame aboveColor altTile
+tl_floorTile1 sh_tile 0 0x422626 none none 0 none
+tl_floorTile2 sh_tile 1 0x422626 none none 0 none
+tl_floorTile3 sh_tile 0 0x422B2B none none 0 none
+tl_floorTile4 sh_tile 1 0x422B2B none none 0 none
+tl_floorTile5 sh_tile 0 0x3A2323 none none 0 none
+tl_floorTile6 sh_tile 1 0x3A2323 none none 0 none
+tl_floorTile7 sh_tile 0 0x3A2C2C none none 0 none
+tl_floorTile8 sh_tile 1 0x3A2C2C none none 0 none
+tl_wallPillar sh_tile 3 0x6B5050 sh_tile 2 0x6B5050 none
+tl_stoneDoorDown sh_tile 4 0x6B5050 none none 0 tl_stoneDoorUp
+tl_stoneDoorUp sh_tile 5 0x6B5050 sh_tile 4 0x6B5050 tl_stoneDoorDown
+tl_floorPanel1 sh_tile 6 0x313A4C none none 0 none
+tl_floorPanel2 sh_tile 6 0x313A4C none none 0 tl_floorPanel2Lit
+tl_floorPanel3 sh_tile 6 0x323A49 none none 0 none
+tl_floorPanel2Lit sh_tile 6 0x283559 none none 0 tl_floorPanel2
+tl_panelWall sh_tile 7 0x1F2C51 sh_tile 2 0x283559 none
+tl_movePanelDown sh_tile 6 0x1F2C51 none none 0 tl_movePanelUp
+tl_movePanelUp sh_tile 7 0x1F2C51 sh_tile 6 0x283559 tl_movePanelDown
+tl_pillarPanel sh_tile 9 0x1F2C51 sh_tile 6 0x283559 none
+tl_stoneWall1 sh_tile 8 0x644f4f sh_tile 2 0x644f4f none
+tl_stoneWall2 sh_tile 10 0x644f4f sh_tile 2 0x644f4f none
+tl_stoneWall3 sh_tile 11 0x644f4f sh_tile 2 0x644f4f none
+tl_stoneFloor1 sh_tile 12 0x644f4f none none 0 none
+tl_stoneFloor2 sh_tile 13 0x644f4f none none 0 none
+tl_stoneTileDown sh_tile 14 0x644f4f none none 0 tl_stoneTileUp
+tl_stoneTileUp sh_tile 15 0x644f4f sh_tile 14 0x644f4f tl_stoneTileDown
+tl_roughPillar sh_tile 17 0x644f4f sh_tile 16 0x644f4f none
+/
+/
+TILESET:
+/ name floorStart floorEnd wallStart wallEnd door cover battleCoverMin battleCoverMax npcCoverMin npcCoverMax
+tlst_early tl_stoneFloor1 tl_stoneFloor2 tl_stoneWall1 tl_stoneWall3 tl_stoneTileDown tl_roughPillar 3 6 6 7
+tlst_middle tl_floorTile1 tl_floorTile8 tl_wallPillar tl_wallPillar tl_stoneDoorDown tl_stoneDoorDown 1 5 0 0
+tlst_late tl_floorPanel1 tl_floorPanel3 tl_panelWall tl_panelWall tl_movePanelDown tl_pillarPanel 0 3 10 10
+/
+/
+FEATURE:
+/ name sheet originX originY connectToX connectToY
+ft_face sh_face 10 19 0 -33
+ft_upperBody sh_body 13 30 0 -20
+ft_lowerBody sh_leg 13 20 0 0
+ft_leftArm sh_arm 0 3 -6 -30
+ft_rightArm sh_arm 0 3 6 -30
+ft_weapon sh_weapon -20 34 0 -30
+ft_projectile sh_projectile 0 10 0 -30
+ft_special sh_special 40 40 0 0
+ft_giantUpperBody sh_giantBody 21 50 0 -25
+ft_giantLowerBody sh_giantLeg 21 25 0 0
+ft_giantLeftArm sh_giantArm 0 5 -12 -45
+ft_giantRightArm sh_giantArm 0 5 12 -45
+ft_giantFace sh_giantFace 14 27 0 -49
+ft_giantWeapon sh_giantWeapon -40 68 0 -49
+ft_giantProjectile sh_giantProjectile 0 20 0 -49
+ft_item sh_item 10 10 0 0
+/
+/
+PIECE:
+/ name feature frame
+/ body
+pc_pixGiantUpper ft_giantUpperBody 0
+pc_pixGiantLower ft_giantLowerBody 0
+pc_pixGiantLeftArm ft_giantLeftArm 0
+pc_pixGiantRightArm ft_giantRightArm 0
+pc_upperBodyM ft_upperBody 0
+pc_upperBodyF ft_upperBody 2
+pc_lowerBodyM ft_lowerBody 0
+pc_lowerBodyF ft_lowerBody 4
+pc_leftArm ft_leftArm 0
+pc_rightArm ft_rightArm 0
+pc_anvil ft_special 0
+pc_basin ft_special 1
+pc_basinWater ft_special 2
+/ eyes
+pc_eyes ft_face 2
+pc_pupils ft_face 3
+pc_giantEyes ft_giantFace 0
+/ hair
+pc_hairF1 ft_face 0
+pc_hairF2 ft_upperBody 18
+pc_hairF3 ft_face 20
+pc_hairM1 ft_face 4
+pc_hairM2 ft_face 18
+pc_hairJavelin ft_upperBody 16
+/ weapons and projectiles
+pc_sword ft_weapon 0
+pc_axe ft_weapon 1
+pc_crossbow ft_weapon 2
+pc_bolt ft_projectile 0
+pc_autosling ft_weapon 4
+pc_stone ft_projectile 1
+pc_club ft_weapon 8
+pc_sceptre ft_weapon 9
+pc_sceptreAct ft_weapon 10
+pc_pixMace ft_weapon 6
+pc_rinkStaff ft_weapon 7
+pc_magicBall ft_projectile 2
+pc_giantSword ft_giantWeapon 0
+pc_giantMagicBall ft_giantProjectile 0
+pc_bomb ft_item 2
+/ armors
+pc_armorPlateM ft_upperBody 4
+pc_armorPlateF ft_upperBody 6
+pc_chestPlateM ft_upperBody 8
+pc_chestPlateF ft_upperBody 10
+pc_ragTopM ft_upperBody 28
+pc_ragTopF ft_upperBody 30
+pc_armorSkirtM ft_lowerBody 8
+pc_armorSkirtF ft_lowerBody 12
+pc_greavesM ft_lowerBody 24
+pc_greavesF ft_lowerBody 28
+pc_bootsM ft_lowerBody 16
+pc_bootsF ft_lowerBody 20
+pc_metalBootsM ft_lowerBody 32
+pc_metalBootsF ft_lowerBody 36
+pc_glasses ft_face 14
+pc_eyepatch ft_face 22
+/ pix armor
+pc_pixCrown ft_face 16
+pc_pixMask ft_face 6
+pc_pixMaskSmall ft_face 12
+pc_pixRobeTop ft_upperBody 12
+pc_pixPlate ft_upperBody 14
+pc_pixRobeBottom ft_lowerBody 40
+pc_pixSpikeArmor ft_upperBody 26
+pc_pixCereTop ft_upperBody 32
+pc_pixCereBottom ft_lowerBody 52
+pc_pixGiantRobeTop ft_giantUpperBody 2
+pc_pixGiantRobeBottom ft_giantLowerBody 4
+pc_pixGiantMask ft_giantFace 1
+pc_pixGiantArmor ft_giantUpperBody 4
+/ npc armor
+pc_shirtJavelinM ft_upperBody 20
+pc_shirtJavelinF ft_upperBody 22
+pc_pantsJavelinM ft_lowerBody 44
+pc_pantsJavelinF ft_lowerBody 48
+pc_rinkHood ft_face 8
+pc_rinkMask ft_face 10
+pc_rinkShirt ft_upperBody 24
+/
+/
+RACE:
+/ name hasGender body legs arms eyes pupils hair hairColors skinColors eyeColors maskSize
+rc_human true pc_upperBodyM pc_lowerBodyM pc_leftArm pc_eyes pc_pupils ftl_hairM ftl_hairColors ftl_skinColors ftl_eyeColors 12
+rc_pix false pc_upperBodyM pc_lowerBodyM pc_leftArm pc_eyes none none none ftl_pixSkinColors none 12
+rc_pixGiant false pc_pixGiantUpper pc_pixGiantLower pc_pixGiantLeftArm pc_giantEyes none none none ftl_pixSkinColors none 25 
+/ npc races
+rc_rink false pc_upperBodyM pc_lowerBodyM pc_leftArm pc_eyes none ftl_rinkHood ftl_rinkHoodColor ftl_rinkSkinColor none 12
+rc_javelin true pc_upperBodyM pc_lowerBodyM pc_leftArm pc_eyes pc_pupils ftl_javelinHairM ftl_javelinHairColor ftl_javelinSkinColor ftl_javelinEyeColor 12
+rc_anvil false pc_anvil none none none none none none ftl_anvilColor none 25
+rc_basin false pc_basin none none none none ftl_basinWater ftl_basinWaterColor ftl_basinColor none 25
+/
+/
+FEATURELIST:
+/ name ft* (1-?)
+/ hats
+ftl_hats none ar_mask ar_glasses ar_eyepatch
+/ prep
+ftl_prep 25 none it_bomb it_bolt none it_goblet it_bomb it_bolt it_stone it_goblet it_bomb it_bolt it_stone none it_bolt it_stone none
+/ human
+ftl_hairM pc_hairM1 pc_hairM2 none
+ftl_hairF pc_hairF1 pc_hairF3 pc_hairF2
+ftl_skinColors 0xFFE9D6 0xE5CBB8 0xCCAE9B 0xB2917E 0x997461
+ftl_hairColors 0xCC4345 0xA55745 0x5B3E38 0x1E1918
+ftl_eyeColors 0xFF0000 0x00FF00 0x0000FF 0xFF6600
+/ pix
+ftl_pixSkinColors 0x327232 0x2D6D3A 0x286943 0x23644B 0x1E6054
+/ npc
+ftl_rinkSkinColor 0x478947
+ftl_javelinSkinColor 0x997461
+ftl_javelinHairColor 0x1E1918
+ftl_javelinEyeColor 0xFF6600
+ftl_javelinHairM pc_hairJavelin
+ftl_javelinHairF pc_hairJavelin
+ftl_rinkHood pc_rinkHood
+ftl_rinkHoodColor 0x4A4A54
+ftl_anvilColor 0x425FAF
+ftl_basinWater pc_basinWater
+ftl_basinWaterColor 0x425FAF
+ftl_basinColor 0x4A4A54
+/
+/
+ARMORSLOT:
+/ name
+aslot_chest
+aslot_leg
+aslot_foot
+aslot_face
+/
+/
+ARMOR:
+/ name slot defense speedPenalty pieceM pieceF color lName
+ar_ragTop aslot_chest 0 0 pc_ragTopM pc_ragTopF 0x887780
+ar_ragPants aslot_leg 0 0 pc_pantsJavelinM pc_pantsJavelinF 0x887780
+ar_armorPlate aslot_chest 3 5 pc_armorPlateM pc_armorPlateF 0x887780
+ar_pixmetalArmorPlate aslot_chest 5 5 pc_armorPlateM pc_armorPlateF 0x425FAF
+ar_chestPlate aslot_chest 5 10 pc_chestPlateM pc_chestPlateF 0x887780
+ar_pixmetalChestPlate aslot_chest 7 10 pc_chestPlateM pc_chestPlateF 0x425FAF
+ar_armorSkirt aslot_leg 2 4 pc_armorSkirtM pc_armorSkirtF 0x887780
+ar_pixmetalArmorSkirt aslot_leg 4 4 pc_armorSkirtM pc_armorSkirtF 0x425FAF
+ar_greaves aslot_leg 4 6 pc_greavesM pc_greavesF 0x887780
+ar_pixmetalGreaves aslot_leg 6 6 pc_greavesM pc_greavesF 0x425FAF
+ar_boots aslot_foot 2 3 pc_bootsM pc_bootsF 0x887780
+ar_pixmetalBoots aslot_foot 4 3 pc_bootsM pc_bootsF 0x425FAF
+ar_metalBoots aslot_foot 4 5 pc_metalBootsM pc_metalBootsF 0x887780
+ar_pixmetalMetalBoots aslot_foot 6 5 pc_metalBootsM pc_metalBootsF 0x425FAF
+/ accessories
+ar_mask aslot_face 0 0 pc_pixMaskSmall none 0x4A4A54 @ar_mask
+ar_glasses aslot_face 0 0 pc_glasses none 0x887780 @ar_glasses
+ar_eyepatch aslot_face 0 0 pc_eyepatch none 0x4A4A54 @ar_eyepatch
+/ pix armor
+ar_pixCrown aslot_face 0 0 pc_pixCrown none 0x425FAF
+ar_pixMask aslot_face 0 0 pc_pixMask none 0x425FAF
+ar_pixMaskSmall aslot_face 0 0 pc_pixMaskSmall none 0x425FAF
+ar_pixRobeTop aslot_chest 0 0 pc_pixRobeTop none 0x4A4A54
+ar_pixPlate aslot_chest 0 0 pc_pixPlate none 0x425FAF
+ar_pixCereTop aslot_chest 0 0 pc_pixCereTop none 0x425FAF
+ar_pixCereBottom aslot_leg 0 0 pc_pixCereBottom none 0x425FAF
+ar_pixSpikeArmor aslot_chest 0 0 pc_pixSpikeArmor none 0x425FAF
+ar_pixRobeBottom aslot_leg 0 0 pc_pixRobeBottom none 0x4A4A54
+ar_pixGiantRobeTop aslot_chest 0 0 pc_pixGiantRobeTop none 0x4A4A54
+ar_pixGiantRobeBottom aslot_leg 0 0 pc_pixGiantRobeBottom none 0x4A4A54
+ar_pixGiantMask aslot_face 0 0 pc_pixGiantMask none 0x425FAF
+ar_pixGiantArmor aslot_chest 0 0 pc_pixGiantArmor none 0x425FAF
+/ npc armor
+ar_shirtJavelin aslot_chest 0 0 pc_shirtJavelinM pc_shirtJavelinF 0x47BC47
+ar_pantsJavelin aslot_leg 0 0 pc_pantsJavelinM pc_pantsJavelinF 0x47BC47
+ar_rinkMask aslot_face 0 0 pc_rinkMask none 0x425FAF
+ar_rinkShirt aslot_chest 0 0 pc_rinkShirt none 0x4A4A54
+/
+/
+SOUND:
+/ name
+sound_twang1
+sound_swing1
+sound_swing2
+sound_swing3
+sound_boom1
+sound_fuse1
+sound_magic1
+sound_putter1
+sound_thunk1
+sound_thunk2
+sound_ric1
+sound_ric2
+sound_ric3
+sound_splat1
+sound_slice1
+sound_bigSplat1
+sound_thud1
+/
+/
+SOUNDPACK:
+/ name volume sound* (1-?)
+spck_crossbow 100 sound_twang1
+spck_swing 100 sound_swing1 sound_swing2 sound_swing3
+spck_fuse 30 sound_fuse1
+spck_boom 100 sound_boom1
+spck_magic 75 sound_magic1
+spck_putter 15 sound_putter1
+spck_thunk 120 sound_thunk1 sound_thunk2
+spck_ric 40 sound_ric1 sound_ric2 sound_ric3
+spck_splat 100 sound_splat1
+spck_slice 110 sound_slice1
+spck_bigSplat 110 sound_bigSplat1
+spck_thud 100 sound_thud1
+/
+/
+PROJECTILE:
+/ name projectileSpeed hitRange aimVariance pierce piece color ammoType soundPack
+prj_bomb 0 0 0 0 pc_bomb 0x51474D it_bomb sh_item 7 0x4A4A54 spck_fuse spck_boom
+prj_bolt 1000 20 0 50 pc_bolt 0x887780 it_bolt spck_thunk
+prj_stone 800 25 3 0 pc_stone 0x887780 it_stone spck_ric
+prj_magicBall 450 25 7 0 pc_magicBall 0x3366FF none spck_thud
+prj_magicBallElite 500 25 2 0 pc_magicBall 0x8EAAFF none spck_thud
+prj_magicBallBoss 500 25 12 0 pc_magicBall 0xA8BDFF none spck_thud
+prj_giantMagicBall 450 35 1 100 pc_giantMagicBall 0x8EAAFF none spck_thud
+prj_giantMagicBallElite 500 35 5 100 pc_giantMagicBall 0x3366FF none spck_thud
+prj_magicBallBossBig 650 35 0 100 pc_giantMagicBall 0xA8BDFF none spck_thud
+/
+/
+WEAPON:
+/ name damage animSpeed cooldown ranged projectile/range speedPenalty piece color soundPack
+/ note that a weapon with cooldown 0 wont consume ammo
+wp_club 40 650 55 false 40 0 pc_club 0x887780 spck_swing spck_splat
+wp_sword 40 700 35 false 45 0 pc_sword 0x887780 spck_swing spck_slice
+wp_pixmetalSword 56 700 35 false 45 0 pc_sword 0x425FAF spck_swing spck_slice
+wp_axe 90 500 100 false 55 10 pc_axe 0x887780 spck_swing spck_bigSplat
+wp_pixmetalAxe 130 500 100 false 55 10 pc_axe 0x425FAF spck_swing spck_bigSplat
+wp_crossbow 100 800 200 true prj_bolt 5 pc_crossbow 0x887780 spck_crossbow
+wp_pixmetalCrossbow 120 800 200 true prj_bolt 5 pc_crossbow 0x425FAF spck_crossbow
+wp_autosling 20 750 5 true prj_stone 15 pc_autosling 0x887780 spck_putter
+wp_pixmetalAutosling 26 750 5 true prj_stone 15 pc_autosling 0x425FAF spck_putter
+/ enemy weapons
+wp_magicShoot 30 300 70 true prj_magicBall 0 pc_sword none spck_magic
+wp_magicShootElite 35 300 40 true prj_magicBallElite 0 pc_sword none spck_magic
+wp_sceptre 10 500 10 true prj_bolt 0 pc_sceptre 0x425FAF none
+wp_magicShootBoss 40 2000 2 true prj_magicBallBoss 0 pc_sceptreAct 0x425FAF spck_magic
+wp_magicShootBossBig 150 90 5 true prj_magicBallBossBig 0 pc_sceptreAct 0x425FAF spck_magic
+wp_pixMace 40 400 60 false 35 5 pc_pixMace 0x425FAF spck_swing spck_splat
+wp_giantBash 120 300 50 false 50 0 pc_giantSword spck_swing spck_splat
+wp_giantMagicShoot 100 300 100 true prj_giantMagicBall 0 pc_giantSword none spck_magic
+wp_giantMagicShootElite 35 300 20 true prj_giantMagicBallElite 0 pc_giantSword none spck_magic
+/ npc weapons
+wp_rinkStaff 10 500 10 true prj_bolt 0 pc_rinkStaff 0x887780 none
+wp_crossbowJavelin 10 500 10 false 10 0 pc_crossbow 0x47BC47 none
+/
+/
+ITEMTYPE:
+/ name autoPick
+itt_coin true
+itt_ingot true
+itt_ammo true
+itt_weapon false
+itt_armor false
+itt_health true
+/
+/
+ITEM:
+/ name type pickupSize max correspondsTo sheet frame color lName
+/ ammo
+it_bomb itt_ammo 1 3 none sh_item 2 0x51474D @it_bomb
+it_bolt itt_ammo 5 20 none sh_item 0 0x887780 @it_bolt
+it_stone itt_ammo 33 99 none sh_item 1 0x887780 @it_stone
+/ currency
+it_coin itt_coin 1 999 none sh_item 3 0x425FAF @it_coin
+it_ingot itt_ingot 1 999 none sh_item 4 0x425FAF @it_ingot
+it_threeCoin itt_coin 3 999 none sh_item 5 0x425FAF @it_threeCoin
+it_threeIngot itt_ingot 3 999 none sh_item 6 0x425FAF @it_threeIngot
+/ health pickups
+it_goblet itt_health 1 999 none sh_item 8 0x425FAF @it_goblet
+/ weapons
+it_club itt_weapon 1 1 wp_club none none 0 @it_club
+it_sword itt_weapon 1 1 wp_sword none none 0 @it_sword
+it_pixmetalSword itt_weapon 1 1 wp_pixmetalSword none none 0 @it_pixmetalSword
+it_axe itt_weapon 1 1 wp_axe none none 0 @it_axe
+it_pixmetalAxe itt_weapon 1 1 wp_pixmetalAxe none none 0 @it_pixmetalAxe
+it_crossbow itt_weapon 1 1 wp_crossbow none none 0 @it_crossbow
+it_pixmetalCrossbow itt_weapon 1 1 wp_pixmetalCrossbow none none 0 @it_pixmetalCrossbow
+it_autosling itt_weapon 1 1 wp_autosling none none 0 @it_autosling
+it_pixmetalAutosling itt_weapon 1 1 wp_pixmetalAutosling none none 0 @it_pixmetalAutosling
+/ armor
+it_armorPlate itt_armor 1 1 ar_armorPlate none none 0 @it_armorPlate
+it_pixmetalArmorPlate itt_armor 1 1 ar_pixmetalArmorPlate none none 0 @it_pixmetalArmorPlate
+it_chestPlate itt_armor 1 1 ar_chestPlate none none 0 @it_chestPlate
+it_pixmetalChestPlate itt_armor 1 1 ar_pixmetalChestPlate none none 0 @it_pixmetalChestPlate
+it_armorSkirt itt_armor 1 1 ar_armorSkirt none none 0 @it_armorSkirt
+it_pixmetalArmorSkirt itt_armor 1 1 ar_pixmetalArmorSkirt none none 0 @it_pixmetalArmorSkirt
+it_greaves itt_armor 1 1 ar_greaves none none 0 @it_greaves
+it_pixmetalGreaves itt_armor 1 1 ar_pixmetalGreaves none none 0 @it_pixmetalGreaves
+it_boots itt_armor 1 1 ar_boots none none 0 @it_boots
+it_pixmetalBoots itt_armor 1 1 ar_pixmetalBoots none none 0 @it_pixmetalBoots
+it_metalBoots itt_armor 1 1 ar_metalBoots none none 0 @it_metalBoots
+it_pixmetalMetalBoots itt_armor 1 1 ar_pixmetalMetalBoots none none 0 @it_pixmetalMetalBoots
+/
+/
+AIPACKAGE:
+/ name dialoguePackage moveShoot approachFar approachNear circleFar circleNear maxRangeRanged minRangeRanged
+/ npc packages
+aiP_rink dpack_rink
+aiP_javelin dpack_javelin
+aiP_anvil dpack_anvil
+aiP_basin dpack_basin
+/ enemy packages
+aiP_basic none false 100 100 100 100 300 150
+aiP_monk none true 100 100 5 200 700 675
+aiP_terminator none true 200 200 50 10 600 100
+aiP_giant none true 100 100 0 0 450 150
+aiP_giantSprayer none true 100 100 0 0 700 150
+/ boss package
+/ name none false none summonInterval summon1 summon2 attackInterval attack* attack*Chargeup attack*Length attack*Track (1-?)
+aiP_boss none false none 5 cls_mook cls_elite 350 wp_magicShootBoss 200 150 false wp_magicShootBossBig 300 300 true
+/
+/
+CLASS:
+/ name race health moveSpeed defense chestArmor legArmor footArmor faceArmor weapon altWeapon aiPackage
+cls_player rc_human 200 200 0 ar_ragTop ar_ragPants ar_boots none wp_club none none
+/cls_player rc_human 220 280 0 ar_pixmetalArmorPlate ar_pixmetalArmorSkirt ar_pixmetalBoots none wp_pixmetalCrossbow wp_pixmetalAxe none
+cls_boss rc_pix 3000 180 5 ar_pixCereTop ar_pixCereBottom none ar_pixCrown wp_sceptre none aiP_boss
+/ enemy types
+cls_mook rc_pix 50 150 0 ar_pixRobeTop ar_pixRobeBottom none ar_pixMask wp_magicShoot wp_pixMace aiP_basic
+cls_maceMook rc_pix 50 200 0 ar_pixRobeTop ar_pixRobeBottom none ar_pixMask wp_pixMace none aiP_basic
+cls_elite rc_pix 100 150 5 ar_pixPlate ar_pixRobeBottom none ar_pixMask wp_magicShootElite wp_pixMace aiP_basic
+cls_bladeMaster rc_pix 100 275 0 ar_pixRobeTop ar_pixRobeBottom none ar_pixMaskSmall wp_pixmetalSword wp_magicShootElite aiP_monk
+cls_terminator rc_pix 100 80 10 ar_pixSpikeArmor ar_pixRobeBottom none ar_pixMask wp_pixmetalAutosling wp_pixMace aiP_terminator
+cls_giant rc_pixGiant 390 50 0 ar_pixGiantRobeTop ar_pixGiantRobeBottom none ar_pixGiantMask wp_giantMagicShoot wp_giantBash aiP_giant
+cls_giantHeavy rc_pixGiant 440 50 10 ar_pixGiantArmor ar_pixGiantRobeBottom none ar_pixGiantMask wp_giantMagicShootElite wp_giantBash aiP_giantSprayer
+/ npcs
+cls_javelin rc_javelin 999 0 999 ar_shirtJavelin ar_pantsJavelin ar_boots none wp_crossbowJavelin none aiP_javelin
+cls_rink rc_rink 999 0 999 ar_rinkShirt ar_pixRobeBottom ar_boots ar_rinkMask wp_rinkStaff none aiP_rink
+cls_anvil rc_anvil 999 0 999 none none none none wp_magicShoot none aiP_anvil
+cls_basin rc_basin 999 0 999 none none none none wp_magicShoot none aiP_basin
+/
+/
+ENCOUNTER:
+/ name creature* creature*Min creature*Max (1-?)
+/ note: try not to have more than 8 enemies at once
+enc_test cls_giant 1 1
+enc_superEarlyStart cls_mook 1 1
+* cls_maceMook 1 1
+enc_superEarlyEnd cls_maceMook 1 1
+enc_earlyStart cls_mook 1 2 cls_maceMook 0 2
+* cls_mook 2 2 cls_elite 1 1
+* cls_maceMook 1 4
+* cls_maceMook 1 2 cls_mook 1 1 cls_elite 1 1
+* cls_maceMook 1 2 cls_mook 1 1
+enc_earlyEnd cls_mook 1 3
+enc_middleStart cls_mook 2 4 cls_elite 1 1
+* cls_mook 2 4 cls_giant 1 1
+* cls_mook 3 4 cls_maceMook 3 4
+* cls_elite 1 2 cls_maceMook 1 2 cls_mook 1 2
+enc_middleEnd cls_elite 3 3
+enc_lateStart cls_giant 1 1 cls_mook 6 7
+* cls_elite 3 4 cls_maceMook 3 4
+* cls_giant 1 2 cls_elite 3 4
+* cls_bladeMaster 1 1 cls_elite 3 4
+* cls_terminator 1 1 cls_elite 3 4
+* cls_giant 2 3
+enc_lateEnd cls_elite 3 4 cls_giant 2 2
+enc_superLateStart cls_elite 6 8
+* cls_giantHeavy 1 1 cls_giant 2 3
+* cls_bladeMaster 3 4 cls_giant 1 2
+* cls_terminator 2 3 cls_elite 4 5
+* cls_bladeMaster 1 2 cls_terminator 1 2 cls_mook 3 4
+enc_superLateEnd cls_elite 4 5 cls_giantHeavy 1 2
+/
+/
+INVENTORY:
+/ name item* item*cost/tickets (1-?)
+/ the super early drop is extremely high on equips
+inv_dropSuperEarly it_sword 5 it_axe 5 it_crossbow 4 it_autosling 3
+/ the early drop table has larger chances for basic equips, to let you try out different equips earlygame
+inv_dropEarly it_coin 50 it_ingot 45 it_bolt 40 it_stone 40 it_bomb 5 it_sword 3 it_axe 3 it_crossbow 3 it_autosling 3 it_armorPlate 2 it_chestPlate 2 it_armorSkirt 2 it_greaves 2 it_boots 2 it_metalBoots 2
+/ the middle drop table has begun to become more about getting money
+inv_dropMiddle it_coin 100 it_ingot 90 it_bolt 75 it_stone 75 it_bomb 20 it_sword 3 it_axe 3 it_crossbow 3 it_autosling 3 it_armorPlate 2 it_chestPlate 2 it_armorSkirt 2 it_greaves 2 it_boots 2 it_metalBoots 2 it_threeCoin 10 it_threeIngot 10
+/ the late drop table no longer drops equipment at all, now just dropping ammo and money
+inv_dropLate it_threeCoin 100 it_threeIngot 90 it_coin 50 it_ingot 45 it_bolt 75 it_stone 75 it_bomb 30
+/ shop inventories
+inv_rink it_goblet 1 it_bolt 1 it_stone 1 it_bomb 5 it_sword 5 it_axe 6 it_crossbow 8 it_autosling 10 it_armorPlate 5 it_chestPlate 7 it_armorSkirt 4 it_greaves 6 it_boots 2 it_metalBoots 4 it_ingot 2
+inv_anvil it_pixmetalSword 5 it_pixmetalAxe 6 it_pixmetalCrossbow 8 it_pixmetalAutosling 10 it_pixmetalArmorPlate 5 it_pixmetalChestPlate 7 it_pixmetalArmorSkirt 4 it_pixmetalGreaves 6 it_pixmetalBoots 2 it_pixmetalMetalBoots 4 it_threeCoin 2
+/ trainer inventories (instead of an item, you have the stat bonus)
+inv_basin 25 15
+inv_javelin 40 10
+/
+/
+PROGRESSION:
+/ name lootTable encounterStart encounterEnd tileset projDarken
+/ the "* none" lines are references to the previous progression, to make different stages have different lengths
+prg_superEarly inv_dropSuperEarly enc_superEarlyStart enc_superEarlyEnd tlst_early true
+prg_early inv_dropEarly enc_earlyStart enc_earlyEnd tlst_early true
+prg_middle inv_dropMiddle enc_middleStart enc_middleEnd tlst_middle false
+* none
+prg_late inv_dropLate enc_lateStart enc_lateEnd tlst_late false
+prg_superLate inv_dropLate enc_superLateStart enc_superLateEnd tlst_late false
+/
+/
+DIFFICULTY:
+/ name coinStart ingotStart lName bossHealthMult item* item*Frequency
+dif_easy 20 5 @dif_easy 70 it_goblet 4 it_coin 7 it_ingot 9 it_bolt 12 it_stone 13
+dif_normal 5 0 @dif_normal 100 it_goblet 7 it_coin 10 it_ingot 11 it_bolt 14 it_stone 15
+dif_hard 0 0 @dif_hard 140 it_goblet 8 it_bolt 16 it_stone 17
+/
+/
+LENGTHSETTING:
+/ name length npcEvery startSize lName
+/ note that each length should have exactly 12 NPC encounters
+length_short 26 2 15 @length_short
+length_medium 50 4 20 @length_medium
+length_long 75 6 40 @length_long
+/
+/
+DIALOGUEPACKAGE:
+/ name introJust introExcessive introUnjust outro
+dpack_intro dia_introJust dia_introExcessive dia_introUnjust dia_outro
+/ name introDialogue purchaseDialogue abstainDialogue talkDialogue* (1-?)
+dpack_rink dia_rinkIntro dia_rinkPurchase dia_rinkAbstain dia_rinkTalk1 dia_rinkTalk1 dia_rinkTalk2 dia_rinkTalk2 dia_rinkTalk3 dia_rinkTalk4 dia_rinkTalk5 dia_rinkTalk6 dia_rinkTalk7 dia_rinkTalk8 dia_rinkTalk9 dia_rinkTalk10
+dpack_javelin dia_javelinIntro dia_javelinPurchase dia_javelinAbstain dia_javelinTalk1 dia_javelinTalk1 dia_javelinTalk2 dia_javelinTalk3 dia_javelinTalk4 dia_javelinTalk5
+dpack_anvil dia_anvilIntro dia_anvilPurchase dia_anvilAbstain dia_anvilTalk1
+dpack_basin dia_basinIntro dia_basinPurchase dia_basinAbstain dia_basinTalk1
+/
+/
+DIALOGUETYPE:
+/ name miscData
+dty_line
+dty_fade
+dty_tradeCoin
+dty_tradeIngot
+dty_trainHealth
+dty_trainSpeed
+dty_poof sh_item 7
+dty_over
+/
+/
+DIALOGUE:
+/ name part*Type part*data (1-?)
+/ intro
+dia_introJust dty_line @dia_intro1J dty_line @dia_intro2
+dia_introExcessive dty_line @dia_intro1E dty_line @dia_intro2
+dia_introUnjust dty_line @dia_intro1U dty_line @dia_intro2
+dia_outro dty_line @dia_outro1 dty_line @dia_outro2 dty_over none
+/ rink
+dia_rinkIntro dty_line @dia_rinkIntro1 dty_line @dia_rinkIntro2 dty_line @dia_rinkIntro3 dty_tradeCoin inv_rink
+dia_rinkTalk1 dty_line @dia_rinkTalk1-1 dty_tradeCoin inv_rink
+dia_rinkTalk2 dty_line @dia_rinkTalk2-1 dty_tradeCoin inv_rink
+dia_rinkTalk3 dty_line @dia_rinkTalk3-1 dty_tradeCoin inv_rink
+dia_rinkTalk4 dty_line @dia_rinkTalk4-1 dty_tradeCoin inv_rink
+dia_rinkTalk5 dty_line @dia_rinkTalk5-1 dty_tradeCoin inv_rink
+dia_rinkTalk6 dty_line @dia_rinkTalk6-1 dty_tradeCoin inv_rink
+dia_rinkTalk7 dty_line @dia_rinkTalk7-1 dty_tradeCoin inv_rink
+dia_rinkTalk8 dty_line @dia_rinkTalk8-1 dty_tradeCoin inv_rink
+dia_rinkTalk9 dty_line @dia_rinkTalk9-1 dty_tradeCoin inv_rink
+dia_rinkTalk10 dty_line @dia_rinkTalk10-1 dty_tradeCoin inv_rink
+dia_rinkPurchase dty_line @dia_rinkPurchase1
+dia_rinkAbstain dty_line @dia_rinkAbstain1 dty_line @dia_rinkAbstain2
+/ javelin
+dia_javelinIntro dty_line @dia_javelinIntro1 dty_line @dia_javelinIntro2 dty_line @dia_javelinIntro3 dty_line @dia_javelinIntro4 dty_line @dia_javelinIntro5 dty_line @dia_javelinIntro6 dty_line @dia_javelinIntro7 dty_line @dia_javelinIntro8 dty_trainSpeed inv_javelin
+dia_javelinTalk1 dty_line @dia_javelinTalk1-1 dty_trainSpeed inv_javelin
+dia_javelinTalk2 dty_line @dia_javelinTalk2-1 dty_trainSpeed inv_javelin
+dia_javelinTalk3 dty_line @dia_javelinTalk3-1 dty_line @dia_javelinTalk3-2 dty_line @dia_javelinTalk3-3 dty_trainSpeed inv_javelin
+dia_javelinTalk4 dty_line @dia_javelinTalk4-1 dty_trainSpeed inv_javelin
+dia_javelinTalk5 dty_line @dia_javelinTalk5-1 dty_trainSpeed inv_javelin
+dia_javelinPurchase dty_fade 0 dty_line @dia_javelinPurchase1 dty_line @dia_javelinPurchase2 dty_poof 0x4A4A54
+dia_javelinAbstain dty_line @dia_javelinAbstain1
+/ anvil
+dia_anvilIntro dty_line @dia_anvilIntro1 dty_line @dia_anvilIntro2 dty_tradeIngot inv_anvil
+dia_anvilPurchase dty_line @dia_anvilPurchase1
+dia_anvilAbstain dty_line @dia_anvilAbstain1
+dia_anvilTalk1 dty_line @dia_anvilTalk1-1 dty_tradeIngot inv_anvil
+/ basin
+dia_basinIntro dty_line @dia_basinIntro1 dty_line @dia_basinIntro2 dty_trainHealth inv_basin
+dia_basinPurchase dty_fade 0xFFFFFF dty_line @dia_basinPurchase1 dty_line @dia_basinPurchase2 dty_poof 0x425FAF
+dia_basinAbstain dty_line @dia_basinAbstain1
+dia_basinTalk1 dty_line @dia_basinTalk1-1 dty_trainHealth inv_basin
+/
+/
+CRIME:
+/ name lName flipOG crimTag
+/ crimTags: 0 = just, 1 = excessive, 2 = unjust
+crim_theft @crim_theft false 1
+crim_murder @crim_murder false 0
+crim_arson @crim_arson false 0
+crim_trespasser @crim_trespasser false 1
+crim_framed @crim_framed false 2
+crim_homosexual @crim_homosexual true 2
+crim_heretic @crim_heretic false 2
+crim_political @crim_political false 2
+crim_treason @crim_treason false 1
+crim_rebel @crim_rebel false 1
+/
+/
+FILLERDATA:
